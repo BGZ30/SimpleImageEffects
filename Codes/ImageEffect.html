@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+
+<h2>Two Unequal Columns</h2>
+
+<div class="outer">
+
+		<div class="intro">
+			<p>Turn images into stencil art of orange and blue!</p>
+		</div>
+		
+	<div class="column left">
+		<form action="">
+			<label for="img_upload">Image</label>
+			<div class="upload-btn">
+				<!--input id="img_upload" name="img_upload" type="file" accept="image/*"-->
+				<input type="file" multiplie="false" accept="image/*" id="img1" name="img_upload" onClick="upLoadImage()">
+				<button type="button" for="img_upload" tabindex="-1" >Upload</button>
+				<input id="img_name" name="img_name" type="text" disabled>
+			</div>
+			<a class="button-link positive disabled" id="download" download="result.png">Download Result</a>
+		
+			<div id="effectsMenu">
+			  <input type="button" value="Grayscale" id="grayBtn" onClick="grayscaleImg()" class="effects">
+			  <input type="button" value="invertColors" id="invBtn" onClick="invertColors()" class="effects">
+			  <input type="button" value="RBG->BGR" id="bgrBtn" onClick="convertBGR()" class="effects">
+			  <input type="button" value="Red Hue" id="redBtn" onClick="redHueFilter()" class="effects">
+			  <input type="button" value="Green Hue" id="greenBtn" onClick="greenHueFilter()" class="effects">
+			  <input type="button" value="Blue Hue" id="blueBtn" onClick="blueHueFilter()" class="effects" >
+			  <input type="button" value="Boarder" id="boxBtn" onClick="boxBoarder()" class="effects" >
+			  <input type="button" value="Window" id="winBtn"  onClick="windowBoarder()" class="effects" >
+			  <input type="button" value="Rotate CW" id="cwBtn" onClick="rotateRight()" class="effects" >
+			  <input type="button" value="Rotate CCW" id="ccwBtn" onClick="rotateLeft()" class="effects" >      
+			  <input type="button" value="Flip" id="flipBtn" onClick="flipImage()" class="effects">
+			  <input type="button" value="reset" id="restBtn" onClick="resetImg()" class="effects">
+			</div>
+		</form>
+	</div>
+
+	<div class='column right'>
+		<p>Hello there</p>
+		<canvas id="can" width="500" height="325"></canvas>
+	</div>
+	
+</div>
+
+</body>
+<script type="text/javascript" src="jscript.js"></script>
+</html>

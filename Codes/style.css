@@ -1,0 +1,60 @@
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: gray;
+	height: 100vh;
+}
+
+.intro{
+	width:100%;
+	height: 5%;
+	background-color: green;
+}
+
+.outer{
+	background-color: red;
+	height: 100%;
+}
+
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left{
+width: 25%;
+height: 100%;
+background-color: blue;
+}
+
+.right{
+width: 75%;
+background-color: yellow;
+height: 100%;
+}
+
+.effects{
+  background-color: #F04E1D;
+  font-family: Comic Sans MS;
+  font-size: 15pt; 
+  width: 126px;
+  height: 50px;
+  float: left;
+  display: center;
+  border-radius: 8px;
+  margin: 1px;
+  cursor: pointer;
+}
+
+#effectsMenu{
+  margin: auto;
+  position: center;
+  background: white;
+  display: block;
+}
