@@ -18,16 +18,16 @@ Simple Effects
 	<div class="column left">
 		<form action="">
 			<label for="img_upload">Image</label>
-			<div class="upload-btn">
+			<div class="upDownload">
 				<!--input id="img_upload" name="img_upload" type="file" accept="image/*"-->
 				<label id="upload"> Upload Image
 				<input type="file" multiplie="false" accept="image/*" id="img_upload" name="img_upload" onClick="upLoadImage()">
 				<!--button type="button" for="img_upload" tabindex="-1" >Upload</button-->
 				</label>
-				<input id="img_name" name="img_name" type="text" disabled>
+				<!--input id="img_name" name="img_name" type="text" disabled-->
+				<a id="download" download="result.png">Download Result</a>
 			</div>
-			<a class="button-link positive disabled" id="download" download="result.png">Download Result</a>
-		
+			
 			<div id="effectsMenu">
 			  <input type="button" value="Grayscale" id="grayBtn" onClick="grayscaleImg()" class="effects">
 			  <input type="button" value="invertColors" id="invBtn" onClick="invertColors()" class="effects">
