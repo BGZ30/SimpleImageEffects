@@ -28,7 +28,7 @@ document.getElementById("img_upload").addEventListener("change", upLoadImage, fa
 
 
 function grayscaleImg() {
-  var imageData = ctx.getImageData(0, 0, img1.width, img1.height);
+  var imageData = ctx.getImageData(0, 0, canv.width, canv.height);
   var data = imageData.data;
   
   for (var i = 0; i < data.length; i+= 4) {
@@ -43,7 +43,7 @@ ctx.putImageData(imageData, 0, 0);
 
 function redHueFilter() {
   
-    var imageData = ctx.getImageData(0, 0, img1.width, img1.height);
+    var imageData = ctx.getImageData(0, 0, canv.width, canv.height);
   var data = imageData.data;
   
   for (var i = 0; i < data.length; i+= 4) {
@@ -66,7 +66,7 @@ ctx.putImageData(imageData, 0, 0);
 
 function blueHueFilter() {
   
-var imageData = ctx.getImageData(0, 0, img1.width, img1.height);
+var imageData = ctx.getImageData(0, 0, canv.width, canv.height);
   var data = imageData.data;
   
   for (var i = 0; i < data.length; i+= 4) {
@@ -88,7 +88,7 @@ ctx.putImageData(imageData, 0, 0);
   
 function greenHueFilter() {
     
-var imageData = ctx.getImageData(0, 0, img1.width, img1.height);
+var imageData = ctx.getImageData(0, 0, canv.width, canv.height);
   var data = imageData.data;
   
   for (var i = 0; i < data.length; i+= 4) {
@@ -132,18 +132,18 @@ function resetImg() {
 //var canv = document.getElementById("can");
  //var ctx = canv.getContext("2d");
 
-   canv.style.transform = 'rotate(0deg)';
+  canv.style.transform = 'rotate(0deg)';
   deg = 0;
 	//var ctx = canv.getContext("2d");
   //newImg.drawTo(canv);
-  ctx.drawImage(img3, 0, 0);
+  ctx.drawImage(img1, 0, 0);
 }
 
 function boxBoarder(){
     var h=img1.height;
     var w=img1.width;
 	
-	var imageData = ctx.getImageData(0, 0, img1.width, img1.height);
+	var imageData = ctx.getImageData(0, 0, canv.width, canv.height);
 	var data = imageData.data;
     
         for (var i = 0; i < data.length; i+= 4) {    
