@@ -63,10 +63,30 @@ height: 100%;
     padding: 10px;
     background: red; 
     display: table;
+	margin-bottom: 10px;
+	margin-top: 10px;
     color: #fff;
+	font-family: Comic Sans MS;
 	border-radius: 8px;
+	cursor: pointer;
 }
 
-.upload-btn input[type=file] {
+.upDownload input[type=file] {
 	display: none;
+}
+.upDownload{
+	background-color: gray;
+	height: 140px;
+}
+
+#download{
+	padding: 10px;
+	background: #4DBD33;
+	opacity: 0.5;
+	color: #fff;
+	font-family: Comic Sans MS;
+	border-radius: 8px;
+	display: table;
+	margin-top: 10px;
+	cursor: not-allowed;
 }
