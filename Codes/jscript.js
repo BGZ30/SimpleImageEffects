@@ -23,7 +23,7 @@ function upLoadImage() {
     }
 }
 
-document.getElementById("img1").addEventListener("change", upLoadImage, false);
+document.getElementById("img_upload").addEventListener("change", upLoadImage, false);
 
 
 
