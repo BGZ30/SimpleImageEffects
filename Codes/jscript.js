@@ -7,6 +7,7 @@ var ctx = canv.getContext("2d");
 var deg = 0;
 
 function upLoadImage() {
+	ctx.clearRect(0, 0, canv.width, canv.height);
     if ( this.files && this.files[0] ) {
         var FR= new FileReader();
         FR.onload = function(e) {
@@ -16,7 +17,7 @@ function upLoadImage() {
            });
            inImg.src = e.target.result;
            img1.src = e.target.result;
-           img2.src = e.target.result;
+           //img2.src = e.target.result;
 		   img3.src = e.target.result;
         };       
         FR.readAsDataURL( this.files[0] );
@@ -264,15 +265,17 @@ function flipImage() {
   //var x =  w * -1 ; 
   //var y =  h * 0; 
   var imageData = ctx.getImageData(0, 0, canv.width, canv.height);
-  img1.data=imageData.data;
+  img2.data=imageData.data;
+  
   // image  has been loaded
-      var h = img2.height;
-  var w = img2.width;
+  var h = canv.height;
+  var w = canv.width;
 
   var x =  w * -1 ; 
   var y =  h * 0; 
   ctx.scale(-1,1); // Set scale to flip the image
-//ctx.clearRect(0, 0, canv.width, canv.height);
-  ctx.drawImage(img1, x,y,w,h); // draw the image
+  //ctx.putImageData(imageData, 0, 0);
+  ctx.clearRect(0, 0, canv.width, canv.height);
+  ctx.drawImage(img2, x,y,w,h); // draw the image
     
 }
